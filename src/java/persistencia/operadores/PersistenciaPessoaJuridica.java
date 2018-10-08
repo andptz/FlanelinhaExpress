@@ -19,7 +19,6 @@ public class PersistenciaPessoaJuridica {
         
         
         conexao = ConexaoBD.conectar();
-        
         //========================================         
         PreparedStatement ps = conexao.prepareStatement("SELECT * FROM pessoaJuridica WHERE  email = ? and senha = ? and situacao='ativado'");
         
