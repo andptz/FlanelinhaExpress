@@ -6,10 +6,6 @@ import modelo.operadores.Motorista;
 import modelo.operadores.Pessoa;
 import modelo.operadores.PessoaJuridica;
 
-/**
- *
- * @author Manel
- */
 public class FabricaPessoa {
     public static Pessoa criaPessoa(String pessoa){
         Pessoa pessoaCriada;

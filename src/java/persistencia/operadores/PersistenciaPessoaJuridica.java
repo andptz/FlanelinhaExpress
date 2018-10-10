@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import modelo.operadores.PessoaJuridica;
 
 import persistencia.conexao.ConexaoBD;
@@ -16,8 +17,7 @@ public class PersistenciaPessoaJuridica {
     
     
     public PessoaJuridica loginPessoaJuridica(String email,String senha) throws ClassNotFoundException, SQLException{
-        
-        
+            
         conexao = ConexaoBD.conectar();
         //========================================         
         PreparedStatement ps = conexao.prepareStatement("SELECT * FROM pessoaJuridica WHERE  email = ? and senha = ? and situacao='ativado'");
@@ -46,6 +46,20 @@ public class PersistenciaPessoaJuridica {
         return pessoa;    
                 
       
+    }
+    
+      public void desativaPessoaJuridica(int id) throws SQLException{
+           
+        conexao = ConexaoBD.conectar();
+        
+        String sql = String.format("UPDATE pessoaJuridica set situacao='desativado' where id = %d returning id",id);
+        Statement statement = conexao.createStatement();
+         
+        //exeucta a query no meu banco de dados
+        ResultSet rs = statement.executeQuery(sql);
+        statement.close();
+        conexao.close();
+    
     }
 }
     /*
