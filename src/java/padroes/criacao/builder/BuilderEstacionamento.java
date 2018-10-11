@@ -63,24 +63,17 @@ public class BuilderEstacionamento {
     }
     
     //Recebe um array com os códigos dos sensores das vagas, cria um vetor de vagas, adiciona as vagas a esse vetor, adicionar o vetor novo ao estacionamento
-    public void addVaga(ArrayList<Vaga> listaVagas){
-        ArrayList<Vaga> novasVagas = new ArrayList<Vaga>(){};
-        for(int i=0;i<listaVagas.size();i++){
-            novasVagas.add(listaVagas.get(i));
-        }
+    public void addVagas(int[] Sensores){
+        //Cria lista vagas aonde cada vaga vai estar atrelado a um sensor da lista
+        ArrayList<Vaga> novasVagas = ClasseRelacoes.retornaVagas(Sensores);
         estacionamento.setListaVagas(novasVagas);
     }
     
     
     //Recebe matricula de um funcionário e busca se tal funcionário existe, se sim relaciona ao estacionamento, se não dá erro
-    public void addFuncionario(String matricula, ArrayList<Funcionario> listaFuncionarios){
-        int i = 0;
-        for(;matricula != listaFuncionarios.get(i).getMatricula() || i<listaFuncionarios.size() ;i++){}
-        if (matricula == listaFuncionarios.get(i).getMatricula()){
-                estacionamento.setFuncionario(funcionario);
-            }
-        else{
-            System.out.println("Matrícula não encontrada");
-        }
+    public void addFuncionario(String matricula){
+        
+        Funcionario funcionario = ClasseRelacoes.getFuncionario(matricula);        
+        estacionamento.setFuncionario(funcionario);
     }
 }
