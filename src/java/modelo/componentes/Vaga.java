@@ -4,7 +4,7 @@ package modelo.componentes;
 
 public class Vaga {
     private int id;
-    private int numero;
+    private int codigo;
     
     public final int TAM_LATI_LONGI = 15;
     
@@ -13,7 +13,7 @@ public class Vaga {
 
     public Vaga(int id, String status, int andar, int numero) {
         this.id = id;
-        this.numero = numero;
+        this.codigo = numero;
     }
 
     public Vaga() {
@@ -47,12 +47,12 @@ public class Vaga {
             throw new IllegalArgumentException("Andar inválido!");
     }
 */
-    public int getNumero() {
-        return numero;
+    public int getCodigo() {
+        return codigo;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
 /*
     public String getLatitude() {
