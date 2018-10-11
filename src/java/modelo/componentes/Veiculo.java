@@ -5,6 +5,8 @@
  */
 package modelo.componentes;
 
+import modelo.operadores.Motorista;
+
 /**
  *
  * @author Edmiltho
@@ -16,15 +18,20 @@ public final class Veiculo {
     private String modelo;
     private String marca;
     private String cor;
+    private Motorista motorista;
     public final int PLACA = 7;
 
-    public Veiculo(int id, String placa, int ano, String modelo, String marca,String cor) {
+    public Veiculo(int id, String placa, int ano, String modelo, String marca, String cor, Motorista motorista) {
+        this.id = id;
         this.placa = placa;
         this.ano = ano;
         this.modelo = modelo;
         this.marca = marca;
         this.cor = cor;
+        this.motorista = motorista;
     }
+
+    
 
     public Veiculo(int ano, String modelo, String marca,String placa,String cor) {
         setAno(ano);
@@ -35,6 +42,15 @@ public final class Veiculo {
         
         
     }
+
+    public Motorista getMotorista() {
+        return motorista;
+    }
+
+    public void setMotorista(Motorista motorista) {
+        this.motorista = motorista;
+    }
+    
     
     public Veiculo(){}
 
