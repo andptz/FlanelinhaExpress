@@ -29,7 +29,7 @@ public class ClasseRelacoes {
         ArrayList<Vaga> novasVagas = new ArrayList<Vaga>(){};
         for(int i=0;i<listaSensor.length;i++){
             Vaga vaga = new Vaga();
-            vaga.setNumero(listaSensor[i]);
+            vaga.setCodigo(listaSensor[i]);
             novasVagas.add(vaga);
         }
         return novasVagas;
@@ -53,8 +53,8 @@ public class ClasseRelacoes {
      
     public static Vaga getVaga(int numero){
         int i = 0;
-        for(;numero != listaVagas.get(i).getNumero() || i<listaVagas.size() ;i++){}
-        if (numero == listaVagas.get(i).getNumero()){
+        for(;numero != listaVagas.get(i).getCodigo() || i<listaVagas.size() ;i++){}
+        if (numero == listaVagas.get(i).getCodigo()){
                 return listaVagas.get(i);
         }
         else{

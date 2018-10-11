@@ -3,23 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/modelo/operadores/Guarda.java</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/padroes/criacao/builder/DiretorEstacionamento.java</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/modelo/operadores/Motorista.java</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/modelo/locais/Bairro.java</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/modelo/locais/Estado.java</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/padroes/criacao/builder/BuilderEstacionamento.java</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/modelo/locais/Cidade.java</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/padroes/criacao/fabrica/FabricaPessoa.java</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/persistencia/operadores/PersistenciaPessoaJuridica.java</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/modelo/componentes/Vaga.java</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/modelo/componentes/Estacionamento.java</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/modelo/locais/Endereco.java</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/modelo/operadores/Funcionario.java</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/modelo/componentes/LocalizacaoGPS.java</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/modelo/componentes/Veiculo.java</file>
+            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/web/login/RecebeDados.java</file>
             <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/web/pagPreLogin/index.html</file>
-            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/modelo/operadores/Administrador.java</file>
         </group>
     </open-files>
 </project-private>
