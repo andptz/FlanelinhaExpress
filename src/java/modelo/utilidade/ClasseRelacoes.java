@@ -16,7 +16,7 @@ import modelo.operadores.Motorista;
  */
 public class ClasseRelacoes {
     
-    //private static ArrayList<Vaga> listaSensor;
+    
     private static int[] listaSensor;
     private static ArrayList<Funcionario> listaFuncionarios = new ArrayList<Funcionario>();
     private static ArrayList<Motorista> listaMotoristas = new ArrayList<Motorista>();
