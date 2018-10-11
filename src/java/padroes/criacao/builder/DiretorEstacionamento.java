@@ -21,14 +21,14 @@ import modelo.locais.Endereco;
  */
 public class DiretorEstacionamento {
     public DiretorEstacionamento(){}
-    public Estacionamento builder(Endereco endereco, Vaga vaga,Funcionario funcionario, LocalizacaoGPS gps, String nome, double ValorHora,String logradouro, String cep, String bairro, String cidade, String estado,String latitude, String longitude,ArrayList<Vaga> listaVagas,String matricula, ArrayList<Funcionario> listaFuncionarios) throws Exception{
+    public Estacionamento builder(Endereco endereco, Vaga vaga,Funcionario funcionario, LocalizacaoGPS gps, String nome, double ValorHora,String logradouro, String cep, String bairro, String cidade, String estado,String latitude, String longitude,int[] listaSensores,String matricula) throws Exception{
         Estacionamento estacionamento = new Estacionamento();
         BuilderEstacionamento BE = new BuilderEstacionamento(estacionamento,endereco,vaga,funcionario,gps);
         BE.addEndereco(logradouro, cep, bairro, cidade, estado);
         BE.addEstacionamento(nome, ValorHora);
-        BE.addFuncionario(matricula, listaFuncionarios);
+        BE.addFuncionario(matricula);
         BE.addLocalizacao(latitude, longitude);
-        BE.addVaga(listaVagas);
+        BE.addVaga(listaSensores);
         return estacionamento;
     }
 }
