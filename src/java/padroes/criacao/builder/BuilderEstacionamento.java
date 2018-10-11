@@ -13,6 +13,7 @@ import modelo.operadores.Funcionario;
 import modelo.locais.Endereco;
 import modelo.locais.Estado;
 import modelo.componentes.LocalizacaoGPS;
+import modelo.utilidade.ClasseRelacoes;
 
 /**
  *
