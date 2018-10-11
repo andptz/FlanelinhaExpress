@@ -18,14 +18,12 @@ public class ClasseRelacoes {
     
     //private static ArrayList<Vaga> listaSensor;
     private static int[] listaSensor;
-    private static ArrayList<Funcionario> listaFuncionarios;
-    private static ArrayList<Motorista> listaMotoristas;
-    private static ArrayList<Vaga> listaVagas;
+    private static ArrayList<Funcionario> listaFuncionarios = new ArrayList<Funcionario>();
+    private static ArrayList<Motorista> listaMotoristas = new ArrayList<Motorista>();
+    private static ArrayList<Vaga> listaVagas = new ArrayList<Vaga>();
 
     public ClasseRelacoes() {
     }
-
-    
     
     public static ArrayList<Vaga> retornaVagas(int[] listaSensor){
         ArrayList<Vaga> novasVagas = new ArrayList<Vaga>(){};
