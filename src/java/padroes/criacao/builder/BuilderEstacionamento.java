@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package padroes.criacao.builder;
+package builder;
 import java.util.ArrayList;
 import modelo.componentes.Estacionamento;
 import modelo.componentes.Vaga;
