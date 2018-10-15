@@ -7,10 +7,7 @@ package modelo.componentes;
 
 import modelo.operadores.Motorista;
 
-/**
- *
- * @author Edmiltho
- */
+
 public final class Veiculo {
     private int id;
     private String placa;
