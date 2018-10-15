@@ -20,8 +20,6 @@ public class pagCadastro extends HttpServlet {
          
                response.sendRedirect("pagPosLogin/generic.html");
             
-            
-            
         } finally {
             out.close();
         }
