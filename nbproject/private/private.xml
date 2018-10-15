@@ -5,7 +5,9 @@
         <group>
             <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/web/WEB-INF/web.xml</file>
             <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/web/login/RecebeDados.java</file>
+            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/modelo/utilidade/ClasseRelacoes.java</file>
             <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/web/pagPreLogin/index.html</file>
+            <file>file:/C:/Users/Manel/Documents/NetBeansProjects/EstacionaWeb/src/java/modelo/componentes/Vaga.java</file>
         </group>
     </open-files>
 </project-private>

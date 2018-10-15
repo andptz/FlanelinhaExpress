@@ -64,7 +64,7 @@ public class BuilderEstacionamento {
     }
     
     //Recebe um array com os códigos dos sensores das vagas, cria um vetor de vagas, adiciona as vagas a esse vetor, adicionar o vetor novo ao estacionamento
-    public void addVagas(int[] Sensores){
+    public void addVaga(int[] Sensores){
         //Cria lista vagas aonde cada vaga vai estar atrelado a um sensor da lista
         ArrayList<Vaga> novasVagas = ClasseRelacoes.retornaVagas(Sensores);
         estacionamento.setListaVagas(novasVagas);

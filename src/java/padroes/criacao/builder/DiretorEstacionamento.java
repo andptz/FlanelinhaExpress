@@ -3,17 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package builder;
+
 
 import modelo.componentes.Estacionamento;
 import modelo.componentes.Vaga;
 import modelo.operadores.Funcionario;
 import builder.BuilderEstacionamento;
-import java.util.ArrayList;
 import modelo.componentes.LocalizacaoGPS;
 import modelo.locais.Endereco;
-
-
 
 /**
  *

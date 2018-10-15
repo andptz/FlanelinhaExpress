@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
-  
-    
     <!-- Link com o Pacote -->
     <servlet>
-        <servlet-name>RecebeDados</servlet-name>
-        <servlet-class>web.login.RecebeDados</servlet-class>
+        <servlet-name>pagLogin</servlet-name>
+        <servlet-class>ControlePaginasWeb.pagLogin</servlet-class>
     </servlet>
-   
+    <servlet>
+        <servlet-name>pagCadastro</servlet-name>
+        <servlet-class>ControlePaginasWeb.pagCadastro</servlet-class>
+    </servlet>
     <!-- Ponte com o link do HTML com a classe -->
     <servlet-mapping>
-        <servlet-name>RecebeDados</servlet-name>
-        <url-pattern>/RecebeDados</url-pattern>
+        <servlet-name>pagLogin</servlet-name>
+        <url-pattern>/pagLogin</url-pattern>
     </servlet-mapping>
-    
-    
-  
+    <servlet-mapping>
+        <servlet-name>pagCadastro</servlet-name>
+        <url-pattern>/pagCadastro</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
