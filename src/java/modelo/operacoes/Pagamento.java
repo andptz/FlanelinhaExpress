@@ -1,13 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package modelo.operacoes;
 
+import java.awt.List;
+import javax.swing.JOptionPane;
 import modelo.operadores.Motorista;
 
-public class Pagamento {
+public abstract class Pagamento implements IPagamentoHandler{
     private int id;
     private double valor;
     private String data;
@@ -71,4 +69,27 @@ public class Pagamento {
              throw new IllegalArgumentException("Valor vazio");
     }
     
+    
+    private IPagamentoHandler pagamentoHandler;
+    @Override
+    public void setNextHandler(IPagamentoHandler handler){
+        this.pagamentoHandler = handler;
+    }
+    
+    
+    @Override
+    public void processHandler(String tipoPagamento, double valor, Motorista motorista){
+        valor = handlePagamento(double valor);
+        if (pagamentoHandler != null && valor > 0)
+            this.pagamentoHandler.processHandler(tipoPagamento, valor, motorista);
+    }
+    
+    
+    protected double perguntaPagamento(String mensagem, double valor){
+        String valorPagamento = JOptionPane.showInputDialog("Valor: ");
+        double valorRestante = valor - Double.parseDouble(valorPagamento);
+        return valorRestante;
+    }
+    
+    protected abstract double handlePagamento(double valor);
 }
