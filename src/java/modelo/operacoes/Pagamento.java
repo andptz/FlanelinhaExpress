@@ -79,7 +79,7 @@ public abstract class Pagamento implements IPagamentoHandler{
     
     @Override
     public void processHandler(String tipoPagamento, double valor, Motorista motorista){
-        valor = handlePagamento(double valor);
+        valor = handlePagamento(valor);
         if (pagamentoHandler != null && valor > 0)
             this.pagamentoHandler.processHandler(tipoPagamento, valor, motorista);
     }
