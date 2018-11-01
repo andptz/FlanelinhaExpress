@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package builder;
+package padroes.criacao.builder;
 
 import modelo.componentes.Vaga;
 import modelo.componentes.Veiculo;
