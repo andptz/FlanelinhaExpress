@@ -46,7 +46,7 @@ public class BuilderReserva {
         
         Motorista motorista = ClasseRelacoes.getMotorista(cnh);
         pagamento.setMotorista(motorista);
-        reserva.setPagamento(pagamento);
+        reserva.setPagamento(pagamento) ;
     }
     
     //Adiciona os atributos de veiculo e relaciona o motorista do veiculo
