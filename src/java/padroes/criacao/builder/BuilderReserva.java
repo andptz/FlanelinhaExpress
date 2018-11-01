@@ -3,10 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package padroes.criacao.builder;
+package builder;
 
+import modelo.operacoes.BoletoHandler;
 import modelo.componentes.Vaga;
 import modelo.componentes.Veiculo;
+import modelo.operacoes.CartaoHandler;
 import modelo.operacoes.Pagamento;
 import modelo.operacoes.Reserva;
 import modelo.operadores.Motorista;
@@ -39,14 +41,26 @@ public class BuilderReserva {
     
     //Adiciona os atributos de Pagamento, relaciona cnh com um motorista existente e adiciona Pagamento à reserva
     public void addPagamento(double valor, String data, boolean status, String cnh){
-        Pagamento pagamento = new Pagamento();
-        pagamento.setValor(valor);
-        pagamento.setData(data);
-        pagamento.setStatus(status);
+       
         
+        CartaoHandler cartaoPagamento = new  CartaoHandler();
+         cartaoPagamento.setValor(valor);
+         cartaoPagamento.setData(data);
+         cartaoPagamento.setStatus(status);
+        
+        BoletoHandler boletoPagamento   = new BoletoHandler();                
+        boletoPagamento.setNextHandler(boletoPagamento);
+        
+        
+        
+          boletoPagamento.setValor(valor);
+         boletoPagamento.setData(data);
+         boletoPagamento.setStatus(status);
+         
         Motorista motorista = ClasseRelacoes.getMotorista(cnh);
-        pagamento.setMotorista(motorista);
-        reserva.setPagamento(pagamento) ;
+        cartaoPagamento.processHandler(data, valor, motorista);               
+        pagamento.setMotorista(motorista);        
+        reserva.setPagamento(pagamento);
     }
     
     //Adiciona os atributos de veiculo e relaciona o motorista do veiculo
