@@ -46,7 +46,6 @@ public class BuilderReserva {
         
         Motorista motorista = ClasseRelacoes.getMotorista(cnh);
         pagamento.setMotorista(motorista);
-        
         reserva.setPagamento(pagamento);
     }
     
