@@ -5,11 +5,12 @@ import javax.swing.JOptionPane;
 import modelo.operadores.Motorista;
 
 
-public class CartaoHandler extends Pagamento{  
+public class BoletoHandler extends Pagamento{  
     @Override
     protected double handlePagamento(double valor, Motorista motorista) {
         double valorRestante = super.perguntaPagamento("Valor a ser pago no cartão: R$", valor);
-        JOptionPane.showMessageDialog(null, "Conectando com a administradora do cartão... - Valor restante: R$" + valorRestante);
+        JOptionPane.showMessageDialog(null, "Gerando boleto para: \nValor restante: R$" + valorRestante 
+                                    + " Motorista: " + motorista.getNomeCompleto());
         return valorRestante;
     }
 }

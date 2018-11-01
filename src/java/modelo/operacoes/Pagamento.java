@@ -77,9 +77,11 @@ public abstract class Pagamento implements IPagamentoHandler{
     }
     
     
-    @Override
     public void processHandler(String tipoPagamento, double valor, Motorista motorista){
-        valor = handlePagamento(valor);
+        
+        if (this.getClass().getName().equalsIgnoreCase(tipoPagamento))
+            valor = handlePagamento(valor, motorista);
+        
         if (pagamentoHandler != null && valor > 0)
             this.pagamentoHandler.processHandler(tipoPagamento, valor, motorista);
     }
@@ -91,5 +93,5 @@ public abstract class Pagamento implements IPagamentoHandler{
         return valorRestante;
     }
     
-    protected abstract double handlePagamento(double valor);
+    protected abstract double handlePagamento(double valor, Motorista motorista);
 }
