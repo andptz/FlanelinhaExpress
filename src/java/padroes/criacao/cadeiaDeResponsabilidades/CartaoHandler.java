@@ -1,7 +1,8 @@
 
-package modelo.operacoes;
+package padroes.criacao.cadeiaDeResponsabilidades;
 
 import javax.swing.JOptionPane;
+import modelo.operacoes.Pagamento;
 import modelo.operadores.Motorista;
 
 

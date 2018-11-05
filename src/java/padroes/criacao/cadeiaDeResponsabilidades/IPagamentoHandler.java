@@ -1,5 +1,5 @@
 
-package modelo.operacoes;
+package padroes.criacao.cadeiaDeResponsabilidades;
 
 import modelo.operadores.Motorista;
 

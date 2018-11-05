@@ -5,10 +5,10 @@
  */
 package builder;
 
-import modelo.operacoes.BoletoHandler;
+import padroes.criacao.cadeiaDeResponsabilidades.BoletoHandler;
 import modelo.componentes.Vaga;
 import modelo.componentes.Veiculo;
-import modelo.operacoes.CartaoHandler;
+import padroes.criacao.cadeiaDeResponsabilidades.CartaoHandler;
 import modelo.operacoes.Pagamento;
 import modelo.operacoes.Reserva;
 import modelo.operadores.Motorista;
