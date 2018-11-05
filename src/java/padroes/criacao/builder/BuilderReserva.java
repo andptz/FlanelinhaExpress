@@ -63,7 +63,6 @@ public class BuilderReserva {
         reserva.setPagamento(pagamento);
     }
     
-    private Pagamento 
     
     //Adiciona os atributos de veiculo e relaciona o motorista do veiculo
     public void addVeiculo(String placa, int ano, String modelo, String marca, String cor, String cnh){
