@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package modelo.operacoes;
 
 import modelo.operadores.Motorista;
@@ -12,12 +8,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import padroes.criacao.cadeiaDeResponsabilidades.CartaoHandler;
 import padroes.criacao.cadeiaDeResponsabilidades.IPagamentoHandler;
 
-/**
- *
- * @author User
- */
+
 public class PagamentoTest {
     
     public PagamentoTest() {
@@ -45,12 +39,28 @@ public class PagamentoTest {
     @Test
     public void testGetId() {
         System.out.println("getId");
-        Pagamento instance = new PagamentoImpl();
+        
+        Motorista motorista = new Motorista();
+        
+        motorista.setId(0);
+        motorista.setNomeCompleto("Caio Rolando da Rocha");
+        motorista.setCpf("111.222.333-44");
+        motorista.setCnh("2462462462462");
+        motorista.setEmail("caio@mail.com");
+        motorista.setSenha("123456");
+        motorista.setTelefone("3323-1717");
+        motorista.setCreditos(500);
+        
+        Pagamento pagamento = new CartaoHandler();
+        pagamento.handlePagamento(50, motorista);
+        
+        
+        
         int expResult = 0;
-        int result = instance.getId();
+        int result = pagamento.getId();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -193,7 +203,7 @@ public class PagamentoTest {
     @Test
     public void testProcessHandler() {
         System.out.println("processHandler");
-        String tipoPagamento = "";
+        String tipoPagamento = "BoletoHandler";
         double valor = 0.0;
         Motorista motorista = null;
         Pagamento instance = new PagamentoImpl();
@@ -236,6 +246,7 @@ public class PagamentoTest {
 
     public class PagamentoImpl extends Pagamento {
 
+        @Override
         public double handlePagamento(double valor, Motorista motorista) {
             return 0.0;
         }

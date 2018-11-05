@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package builder;
+package padroes.criacao.builder;
 
 import padroes.criacao.cadeiaDeResponsabilidades.BoletoHandler;
 import modelo.componentes.Vaga;
@@ -40,8 +40,8 @@ public class BuilderReserva {
     }
     
     //Adiciona os atributos de Pagamento, relaciona cnh com um motorista existente e adiciona Pagamento à reserva
-    public void addPagamento(double valor, String data, boolean status, String cnh){
-       
+    public void addPagamento(double valor, String data, boolean status, String cnh, String tipoPagamento){
+        
         
         CartaoHandler cartaoPagamento = new  CartaoHandler();
          cartaoPagamento.setValor(valor);
@@ -58,10 +58,12 @@ public class BuilderReserva {
          boletoPagamento.setStatus(status);
          
         Motorista motorista = ClasseRelacoes.getMotorista(cnh);
-        cartaoPagamento.processHandler(data, valor, motorista);               
+        cartaoPagamento.processHandler(tipoPagamento, valor, motorista);               
         pagamento.setMotorista(motorista);        
         reserva.setPagamento(pagamento);
     }
+    
+    private Pagamento 
     
     //Adiciona os atributos de veiculo e relaciona o motorista do veiculo
     public void addVeiculo(String placa, int ano, String modelo, String marca, String cor, String cnh){
