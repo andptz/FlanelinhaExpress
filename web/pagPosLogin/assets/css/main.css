@@ -2254,7 +2254,7 @@ input, select, textarea {
 			}
 
 			ul.icons li .icon {
-				color: inherit;
+				color: #FFEB3B;
 			}
 
 				ul.icons li .icon:before {
@@ -3297,7 +3297,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		border-bottom: solid 5px #f56a6a;
+		border-bottom: solid 5px #FFEB3B;
 		padding: 6em 0 1em 0;
 		position: relative;
 	}
@@ -3312,7 +3312,7 @@ input, select, textarea {
 
 		#header .logo {
 			border-bottom: 0;
-			color: inherit;
+			color: #FFEB3B;
 			font-family: "Roboto Slab", serif;
 			font-size: 1.125em;
 		}

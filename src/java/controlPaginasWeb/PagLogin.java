@@ -28,10 +28,10 @@ public class PagLogin extends HttpServlet {
             
             
             */
-            if(request.getParameter("email").equalsIgnoreCase("senha@hotmail.com")){
-               response.sendRedirect("pagPreLogin/cadastro.html");
             
-            }
+            response.sendRedirect("pagPosLogin/generic.html");
+            
+            
             
         } finally {
             out.close();
