@@ -3,11 +3,11 @@
     <!-- Link com o Pacote -->
     <servlet>
         <servlet-name>pagLogin</servlet-name>
-        <servlet-class>ControlePaginasWeb.pagLogin</servlet-class>
+        <servlet-class>controlPaginasWeb.PagLogin</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>pagCadastro</servlet-name>
-        <servlet-class>ControlePaginasWeb.pagCadastro</servlet-class>
+        <servlet-class>controlPaginasWeb.PagCadastro</servlet-class>
     </servlet>
     <!-- Ponte com o link do HTML com a classe -->
     <servlet-mapping>

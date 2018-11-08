@@ -1,4 +1,4 @@
-package ControlePaginasWeb;
+package controlPaginasWeb;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-public class pagCadastro extends HttpServlet {
+public class PagCadastro extends HttpServlet {
 
    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
