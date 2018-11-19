@@ -2,15 +2,18 @@
 package padroes.criacao.cadeiaDeResponsabilidades;
 
 import javax.swing.JOptionPane;
+import modelo.operacoes.CadeiaPagamento;
 import modelo.operacoes.Pagamento;
 import modelo.operadores.Motorista;
 
 
-public class CartaoHandler extends Pagamento{  
+public class CartaoHandler extends CadeiaPagamento {
     @Override
-    protected double handlePagamento(double valor, Motorista motorista) {
-        double valorRestante = super.perguntaPagamento("Valor a ser pago no cartão: R$", valor);
-        JOptionPane.showMessageDialog(null, "Conectando com a administradora do cartão... - Valor restante: R$" + valorRestante);
-        return valorRestante;
+    protected void handlePagamento(Pagamento pagamento) {
+        System.out.println("Realizado pagamento via Cartão de Crédito no valor de R$ " + pagamento.getValor() +"\n"
+                + "Dados do cliente:\n" 
+                + pagamento.getMotorista().getNomeCompleto() + "\n"
+                + pagamento.getMotorista().getCpf() + "\n"
+                + pagamento.getMotorista().getCnh());
     }
 }
