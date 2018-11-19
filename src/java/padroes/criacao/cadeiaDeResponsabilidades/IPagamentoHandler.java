@@ -1,10 +1,9 @@
 
 package padroes.criacao.cadeiaDeResponsabilidades;
 
-import modelo.operadores.Motorista;
-
+import modelo.operacoes.Pagamento;
 
 public interface IPagamentoHandler {
     public void setNextHandler(IPagamentoHandler handler);
-    public void processHandler(String tipoPagamento, double valor, Motorista motorista);
+    public void processHandler(String tipoPagamento, Pagamento pagamento);
 }
