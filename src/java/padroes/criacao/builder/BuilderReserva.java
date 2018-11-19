@@ -23,7 +23,7 @@ public class BuilderReserva {
     private Pagamento pagamento;
     private Veiculo veiculo;
     private Vaga vaga;
-
+    
     public BuilderReserva(Reserva reserva, Pagamento pagamento, Veiculo veiculo, Vaga vaga) {
         this.reserva = reserva;
         this.pagamento = pagamento;
@@ -40,25 +40,15 @@ public class BuilderReserva {
     }
     
     //Adiciona os atributos de Pagamento, relaciona cnh com um motorista existente e adiciona Pagamento à reserva
-    public void addPagamento(double valor, String data, boolean status, String cnh, String tipoPagamento){
+    public void addPagamento(Pagamento pagamento, String tipoPagamento){
         
-        
-        CartaoHandler cartaoPagamento = new  CartaoHandler();
-         cartaoPagamento.setValor(valor);
-         cartaoPagamento.setData(data);
-         cartaoPagamento.setStatus(status);
-        
+        CartaoHandler cartaoPagamento = new CartaoHandler();
         BoletoHandler boletoPagamento   = new BoletoHandler();                
-        boletoPagamento.setNextHandler(boletoPagamento);
         
+        cartaoPagamento.setNextHandler(boletoPagamento);
         
-        
-          boletoPagamento.setValor(valor);
-         boletoPagamento.setData(data);
-         boletoPagamento.setStatus(status);
-         
-        Motorista motorista = ClasseRelacoes.getMotorista(cnh);
-        cartaoPagamento.processHandler(tipoPagamento, valor, motorista);               
+        Motorista motorista = ClasseRelacoes.getMotorista(pagamento.getMotorista().getCnh());
+        cartaoPagamento.processHandler(tipoPagamento, pagamento);       
         pagamento.setMotorista(motorista);        
         reserva.setPagamento(pagamento);
     }
@@ -84,4 +74,6 @@ public class BuilderReserva {
         Vaga vaga = ClasseRelacoes.getVaga(numero);
         reserva.setVaga(vaga);
     }
+    
+    //setDadosPagamento(double valor, String data, boolean status, String cnh, String tipoPagamento, Pagamento pagamento){}
 }

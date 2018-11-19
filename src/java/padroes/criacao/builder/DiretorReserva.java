@@ -8,8 +8,6 @@ import modelo.componentes.Vaga;
 import modelo.componentes.Veiculo;
 import modelo.operacoes.Pagamento;
 import modelo.operacoes.Reserva;
-import modelo.operadores.Motorista;
-import modelo.utilidade.ClasseRelacoes;
 /**
  *
  * @author Cacherow
