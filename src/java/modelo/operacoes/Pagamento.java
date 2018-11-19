@@ -1,12 +1,9 @@
 
 package modelo.operacoes;
 
-import padroes.criacao.cadeiaDeResponsabilidades.IPagamentoHandler;
-import java.awt.List;
-import javax.swing.JOptionPane;
 import modelo.operadores.Motorista;
 
-public abstract class Pagamento implements IPagamentoHandler{
+public class Pagamento{
     private int id;
     private double valor;
     private String data;
@@ -56,8 +53,6 @@ public abstract class Pagamento implements IPagamentoHandler{
     public void setMotorista(Motorista motorista) {
         this.motorista = motorista;
     }
-
-    
     
     public double getValor() {
         return valor;
@@ -69,30 +64,4 @@ public abstract class Pagamento implements IPagamentoHandler{
         else
              throw new IllegalArgumentException("Valor vazio");
     }
-    
-    
-    private IPagamentoHandler pagamentoHandler;
-    @Override
-    public void setNextHandler(IPagamentoHandler handler){
-        this.pagamentoHandler = handler;
-    }
-    
-    
-    public void processHandler(String tipoPagamento, double valor, Motorista motorista){
-        
-        if (this.getClass().getName().equalsIgnoreCase(tipoPagamento))
-            valor = handlePagamento(valor, motorista);
-        
-        if (pagamentoHandler != null && valor > 0)
-            this.pagamentoHandler.processHandler(tipoPagamento, valor, motorista);
-    }
-    
-    
-    protected double perguntaPagamento(String mensagem, double valor){
-        String valorPagamento = JOptionPane.showInputDialog("Valor: ");
-        double valorRestante = valor - Double.parseDouble(valorPagamento);
-        return valorRestante;
-    }
-    
-    protected abstract double handlePagamento(double valor, Motorista motorista);
 }
