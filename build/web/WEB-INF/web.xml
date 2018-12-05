@@ -2,20 +2,52 @@
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     <!-- Link com o Pacote -->
     <servlet>
-        <servlet-name>pagLogin</servlet-name>
-        <servlet-class>controlPaginasWeb.PagLogin</servlet-class>
+        <servlet-name>PagEstacionamento</servlet-name>
+        <servlet-class>paginasWebControl.PagEstacionamento</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>pagCadastro</servlet-name>
-        <servlet-class>controlPaginasWeb.PagCadastro</servlet-class>
+        <servlet-name>PagLogin</servlet-name>
+        <servlet-class>paginasWebControl.PagLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PagCadastro</servlet-name>
+        <servlet-class>paginasWebControl.PagCadastro</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PagMapa</servlet-name>
+        <servlet-class>paginasWebControl.PagMapa</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PagFuncionario</servlet-name>
+        <servlet-class>paginasWebControl.PagFuncionario</servlet-class>
+    </servlet>
+        <servlet>
+        <servlet-name>PagInicio</servlet-name>
+        <servlet-class>paginasWebControl.PagInicio</servlet-class>
     </servlet>
     <!-- Ponte com o link do HTML com a classe -->
     <servlet-mapping>
-        <servlet-name>pagLogin</servlet-name>
+        <servlet-name>PagInicio</servlet-name>
+        <url-pattern>/pagInicio</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PagEstacionamento</servlet-name>
+        <url-pattern>/pagEstacionamento</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PagFuncionario</servlet-name>
+        <url-pattern>/pagFuncionario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PagMapa</servlet-name>
+        <url-pattern>/pagMapa</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PagLogin</servlet-name>
         <url-pattern>/pagLogin</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>pagCadastro</servlet-name>
+        <servlet-name>PagCadastro</servlet-name>
         <url-pattern>/pagCadastro</url-pattern>
     </servlet-mapping>
     <session-config>
